@@ -1,0 +1,6 @@
+Product ID,Product Name,Category,Seller,Price,Stock Quantity,Reorder Level,Date Added
+001,Widget A,Widgets Inc.,Supply Store,25.99,100,20,2024-01-15
+002,Widget B,Widgets Inc.,Supply Store,35.49,50,10,2024-01-20
+003,Gadget X,Tech Gadgets,Electronic Vendor,89.99,30,15,2024-02-05
+004,Gadget Y,Tech Gadgets,Electronic Vendor,120.00,20,5,2024-02-10
+005,Accessory Z,Accessories,Goods R Us,15.75,200,50,2024-03-01
