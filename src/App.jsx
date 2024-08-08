@@ -6,12 +6,19 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("sampleinventory.csv")
-      .then((response) => response.text())
+    fetch("/sampleinventory.csv")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.text();
+      })
       .then((text) => {
+        console.log("FETCHED CSV TEXT:", text);
         Papa.parse(text, {
-          download: true,
           header: true,
+          skipEmptyLines: true,
+          dynamicTyping: true,
           complete: (results) => {
             console.log("PARSE RESULTS:", results);
             setData(results.data);
@@ -24,7 +31,7 @@ function App() {
       .catch((error) => console.error("Error fetching CSV:", error));
   }, []);
 
-  console.log(data);
+  console.log("RENDERED DATA:", data);
 
   return (
     <div className="App">
