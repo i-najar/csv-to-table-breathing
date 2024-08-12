@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+## Important!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Be sure to update the .env variables to link to whichever CSV you'd like to use.
 
 ## Available Scripts
 
