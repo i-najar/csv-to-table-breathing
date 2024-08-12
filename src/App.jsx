@@ -37,7 +37,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Sample Inventory CSV</h1>
+      <h1>Inventory</h1>
       <table>
         <thead>
           <tr>
