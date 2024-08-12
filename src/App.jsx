@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
+
 import "./App.css";
 
 function App() {
   const [data, setData] = useState([]);
+  const apiURL = process.env.REACT_APP_CSV_URL;
 
   useEffect(() => {
-    fetch("/sampleinventory.csv")
+    fetch(apiURL)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
