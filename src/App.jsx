@@ -17,7 +17,24 @@ function App() {
       })
       .then((text) => {
         console.log("FETCHED CSV TEXT:", text);
-        Papa.parse(text, {
+
+        const lines = text.split("\n");
+        console.log("LINES:", lines);
+
+        // Columns start on 4th line of CSV; index is 3 as zero-based index
+
+        const headerLineIndex = 3;
+        const headerLine = lines[headerLineIndex];
+
+        const dataLines = lines.slice(headerLineIndex + 1);
+
+        console.log("DATALINES:", dataLines);
+
+        const combinedCSV = [headerLine, ...dataLines].join("\n");
+
+        console.log("COMBINED CSV:", combinedCSV);
+
+        Papa.parse(combinedCSV, {
           header: true,
           skipEmptyLines: true,
           dynamicTyping: true,
