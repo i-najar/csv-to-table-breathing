@@ -40,7 +40,12 @@ function App() {
           dynamicTyping: true,
           complete: (results) => {
             console.log("PARSE RESULTS:", results);
-            setData(results.data);
+            const filteredData = results.data.filter((row) =>
+              // if at least one value is not null/empty, row is displayed
+              Object.values(row).some((value) => value !== null && value !== "")
+            );
+            console.log("FILTERED DATA:", filteredData);
+            setData(filteredData);
           },
           error: (error) => {
             console.error("Error parsing CSV:", error);
