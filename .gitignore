@@ -22,6 +22,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-public/testsheet2.csv
-public/ddsheet.csv
 public/bproducts.csv
+public/ddsheet.csv
+public/testsheet2.csv
