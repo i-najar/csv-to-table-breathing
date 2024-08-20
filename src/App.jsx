@@ -43,7 +43,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Website Daily Deals</h1>
+      <h1>Bazarr Breathing Products</h1>
       <table>
         <thead>
           <tr>
