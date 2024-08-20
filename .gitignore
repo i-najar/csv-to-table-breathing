@@ -23,3 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 public/testsheet2.csv
+public/ddsheet.csv
+public/bproducts.csv
